@@ -14,20 +14,32 @@ import { electronicsSubCategories, mensSubCategories, womenSubCategories } from 
 export class MenuComponent {
 
   selectedCategory!: string;
+  viewDiv: boolean = false
 
   electronicsSubCategories = electronicsSubCategories
   mensSubCategories = mensSubCategories
   womenSubCategories = womenSubCategories
 
-  constructor(private router: Router, private route: Router) {
-  }
+  selectedSubCategories: string[] = []
 
-  ngOnInit() {
-    this.selectCategory((this.route.url).split('/')[2])
+  constructor(private router: Router) {
   }
 
   selectCategory(category: string) {
-    this.selectedCategory = category;
+
+    if (category === 'electronics') {
+      this.selectedSubCategories = electronicsSubCategories
+    }
+    if (category == 'mens') {
+      this.selectedSubCategories = mensSubCategories
+    }
+    if (category === 'womens') {
+      this.selectedSubCategories = womenSubCategories
+    }
+
+    this.selectedCategory = category
+    this.viewDiv = !this.viewDiv
+
   }
 
   navigateToSubCategory(subcategory: string) {

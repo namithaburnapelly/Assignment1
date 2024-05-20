@@ -7,7 +7,7 @@
                     <div class="sellerName">
                         {{product.sellerName}}
                         <img src="../../assets/add-to-cart.png" alt="Add to Cart" width="24px" style="cursor: pointer;"
-                            (click)="addToCart(product.id)">
+                            (click)="addToCart(product.id); showToast(product.productName)">
                     </div>
                     <div>{{product.productName}}</div>
                     <div>&#8377;{{product.productPrice}}</div>
@@ -15,4 +15,8 @@
             </div>
         </div>
     </div>
+</div>
+
+<div *ngFor="let toast of toasts">
+    {{toast.message}}
 </div>

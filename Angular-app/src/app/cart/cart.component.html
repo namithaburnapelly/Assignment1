@@ -13,8 +13,8 @@
                     <div>{{product.productName}}</div>
                     <div>&#8377;{{product.productPrice}}</div>
                 </div>
-                <div style="color: red; cursor: pointer;">Remove</div>
-                <!-- (click)="removeFromCart(product.id)"  -->
+                <div style="color: red; cursor: pointer;" (click)="removeFromCart(product.id)">Remove</div>
+
             </div>
         </div>
     </div>

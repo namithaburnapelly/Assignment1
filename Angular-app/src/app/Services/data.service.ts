@@ -12,7 +12,7 @@ export class DataService {
     // {
     //   id: 1,
     //   productImg: "../assets/bear.jpg",
-    //   productName: "Samsung Galaxy S24",
+    //   productName: "namithS",
     //   productPrice: 2467,
     //   productSubType: "Mobiles",
     //   productType: "Electronics",
@@ -77,7 +77,10 @@ export class DataService {
     return this.cartArray;
   }
 
-  // removeFromCart(index: number) {
-  //   return this.cartArray.splice(index - 1, 1)
-  // }
+  removeFromCart(id: number) {
+    const index = this.cartArray.findIndex(product => product.id === id)
+    if (index != -1) {
+      this.cartArray.splice(index, 1)
+    }
+  }
 }

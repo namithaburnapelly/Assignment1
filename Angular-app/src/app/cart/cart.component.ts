@@ -26,8 +26,9 @@ export class CartComponent {
     return this.dataService.getCartCount()
   }
 
-  // removeFromCart(id: number) {
-  //   return this.dataService.removeFromCart(id);
-  // }
+  removeFromCart(id: number) {
+    console.log(id)
+    this.dataService.removeFromCart(id);
+  }
 
 }

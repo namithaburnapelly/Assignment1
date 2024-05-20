@@ -18,21 +18,9 @@
     </nav>
 </div>
 
-
-<div *ngIf="selectedCategory === 'electronics'" class="subType-container">
-    <div *ngFor="let type of electronicsSubCategories" class="subCategory" (click)="navigateToSubCategory(type)">
-        {{ type }}
-    </div>
+<div class="subType-container" *ngIf="viewDiv == true">
+    <div *ngFor="let type of selectedSubCategories" class="subCategory" (click)="navigateToSubCategory(type)">
+        {{type}}</div>
 </div>
 
-<div *ngIf="selectedCategory === 'mens'" class="subType-container">
-    <div *ngFor="let type of mensSubCategories" class="subCategory" (click)="navigateToSubCategory(type)">
-        {{ type }}
-    </div>
-</div>
-
-<div *ngIf="selectedCategory === 'womens'" class="subType-container">
-    <div *ngFor="let type of womenSubCategories" class="subCategory" (click)="navigateToSubCategory(type)">
-        {{ type }}</div>
-</div>
 <router-outlet></router-outlet>
