@@ -1,0 +1,28 @@
+<div class="main-container">
+    <div id="headingCart">
+        Cart
+    </div>
+    <div *ngIf="checkCartExists()!==0" class="product-container">
+        <div *ngFor="let product of cart">
+            <div class="product-sub-container">
+                <div><img src={{product.productImg}} alt="Image" width="100px"></div>
+                <div style="width: 28vh;">
+                    <div class="sellerName">
+                        {{product.sellerName}}
+                    </div>
+                    <div>{{product.productName}}</div>
+                    <div>&#8377;{{product.productPrice}}</div>
+                </div>
+                <div style="color: red; cursor: pointer;">Remove</div>
+                <!-- (click)="removeFromCart(product.id)"  -->
+            </div>
+        </div>
+    </div>
+    <div *ngIf="checkCartExists()===0" id="emptyCart-container">
+        <div id="img-container">
+            <img src="../../assets/emptycart.db985618501e80448a67.webp" alt="emptycart" width="200px">
+        </div>
+        <div>Your Cart is Empty</div>
+        <div id="buttonShop" routerLink="/">Start Shopping</div>
+    </div>
+</div>

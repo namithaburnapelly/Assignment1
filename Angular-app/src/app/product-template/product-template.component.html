@@ -1,0 +1,18 @@
+<div class="main-container">
+    <div class="product-container">
+        <div *ngFor="let product of dataArray">
+            <div class="product-sub-container">
+                <div><img src={{product.productImg}} alt="Image" width="100px"></div>
+                <div style="width: 28vh;">
+                    <div class="sellerName">
+                        {{product.sellerName}}
+                        <img src="../../assets/add-to-cart.png" alt="Add to Cart" width="24px" style="cursor: pointer;"
+                            (click)="addToCart(product.id)">
+                    </div>
+                    <div>{{product.productName}}</div>
+                    <div>&#8377;{{product.productPrice}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

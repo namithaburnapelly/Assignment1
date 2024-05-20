@@ -1,0 +1,28 @@
+.main-container {
+    padding: 30px;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+}
+
+.product-sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vh;
+    height: 44vh;
+    align-items: center;
+    padding: 15px;
+    border: 1px aquamarine solid;
+    border-radius: 10px;
+}
+
+.sellerName {
+    color: lightslategrey;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}

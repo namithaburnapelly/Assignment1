@@ -1,0 +1,25 @@
+.expandImg {
+    width: 15px;
+}
+
+#nav-container {
+    display: flex;
+    justify-content: left;
+    background-color: deepskyblue;
+    column-gap: 30px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.subType-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    background-color: gold;
+    padding: 20px;
+}
+
+.subCategory {
+    cursor: pointer;
+}

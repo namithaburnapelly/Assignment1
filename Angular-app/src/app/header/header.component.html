@@ -1,0 +1,28 @@
+<div>
+    <div id="header-container">
+        <div id="search_division">
+            <form class="content-division">
+                <img src="../../assets/search_24dp.png" alt="Search" class="head-icons">
+                <input type="text" placeholder="Search for Products, Brands and More" required />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+        <div class="content-division">
+            <img src="../../assets/account_circle_24dp.png" alt="Account" class="head-icons">
+            <span>Namitha</span>
+            <img src="../../assets/expand_more_24dp.png" alt="expand_more" class="head-icons">
+        </div>
+        <div class="content-division">
+            <img src="../../assets/shopping_cart_24dp.png" alt="cart" class="head-icons">
+            <span id="cart-count">{{getLength()}}</span>
+            <a class="button" routerLink="/cart" routerLinkActive="active">Cart</a><br>
+        </div>
+        <div class="content-division">
+            <img src="../../assets/storefront_24dp.png" alt="store" class="head-icons">
+            <a class="button" routerLink="/productDetails" routerLinkActive="active">Add Product</a>
+        </div>
+    </div>
+</div>
+<app-menu></app-menu>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,38 @@
+<div>
+    <nav id="nav-container">
+        <div (click)="selectCategory('electronics')" style="cursor: pointer;"> Electronics
+            <span>
+                <img src="../../assets/expand_more_24dp.png" alt="Expand" class="expandImg">
+            </span>
+        </div>
+        <div (click)="selectCategory('mens')" style="cursor: pointer;"> Men
+            <span>
+                <img src="../../assets/expand_more_24dp.png" alt="Expand" class="expandImg">
+            </span>
+        </div>
+        <div (click)="selectCategory('womens')" style="cursor: pointer;"> Women
+            <span>
+                <img src="../../assets/expand_more_24dp.png" alt="Expand" class="expandImg">
+            </span>
+        </div>
+    </nav>
+</div>
+
+
+<div *ngIf="selectedCategory === 'electronics'" class="subType-container">
+    <div *ngFor="let type of electronicsSubCategories" class="subCategory" (click)="navigateToSubCategory(type)">
+        {{ type }}
+    </div>
+</div>
+
+<div *ngIf="selectedCategory === 'mens'" class="subType-container">
+    <div *ngFor="let type of mensSubCategories" class="subCategory" (click)="navigateToSubCategory(type)">
+        {{ type }}
+    </div>
+</div>
+
+<div *ngIf="selectedCategory === 'womens'" class="subType-container">
+    <div *ngFor="let type of womenSubCategories" class="subCategory" (click)="navigateToSubCategory(type)">
+        {{ type }}</div>
+</div>
+<router-outlet></router-outlet>
